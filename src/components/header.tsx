@@ -14,7 +14,7 @@ function Header() {
         </Avatar>
         <div className="w-full">
           <h1 className="text-sm font-semibold ">Ashraf Elshaer</h1>
-          <span className="text-sm text-secondary-foreground/80">
+          <span className="text-sm text-muted-foreground">
             Softwere Engineer
           </span>
         </div>

@@ -3,7 +3,9 @@ import Location from "@/components/location";
 import Mode from "@/components/mode";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
+
 export default function Home() {
+ 
   return (
     <main className="mx-auto max-w-6xl p-4">
       <Header />
@@ -16,7 +18,12 @@ export default function Home() {
               <h3 className="">about</h3>
             </CardHeader>
             <CardContent>
-              <p> hello </p>
+              <p>
+                {" "}
+                Passionate about crafting seamless user experiences and staying
+                ahead in the ever-evolving tech landscape. Let&apos;s build
+                innovative solutions together!{" "}
+              </p>
             </CardContent>
           </Card>
           <Card className="col-span-2 row-span-2 overflow-hidden">

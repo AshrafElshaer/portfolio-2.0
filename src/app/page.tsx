@@ -1,5 +1,6 @@
 import Header from "@/components/header";
 import Location from "@/components/location";
+import Mode from "@/components/mode";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 export default function Home() {
@@ -9,14 +10,7 @@ export default function Home() {
       <div className="mx-auto w-full max-w-6xl pt-8">
         <div className="grid grid-flow-row-dense gap-5 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
           <Location />
-          <Card className="sm:h-40">
-            <CardHeader>
-              <h3 className="">mode</h3>
-            </CardHeader>
-            <CardContent>
-              <p> hello </p>
-            </CardContent>
-          </Card>
+          <Mode />
           <Card className="col-span-2 ">
             <CardHeader>
               <h3 className="">about</h3>

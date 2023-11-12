@@ -1,3 +1,4 @@
+import About from "@/components/about";
 import Header from "@/components/header";
 import Location from "@/components/location";
 import Mode from "@/components/mode";
@@ -13,19 +14,7 @@ export default function Home() {
         <div className="grid grid-flow-row-dense gap-5 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
           <Location />
           <Mode />
-          <Card className="col-span-2 ">
-            <CardHeader>
-              <h3 className="">about</h3>
-            </CardHeader>
-            <CardContent>
-              <p>
-                {" "}
-                Passionate about crafting seamless user experiences and staying
-                ahead in the ever-evolving tech landscape. Let&apos;s build
-                innovative solutions together!{" "}
-              </p>
-            </CardContent>
-          </Card>
+          <About />
           <Card className="col-span-2 row-span-2 overflow-hidden">
             <CardHeader>
               <h3 className="">experience</h3>

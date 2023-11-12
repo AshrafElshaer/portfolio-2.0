@@ -1,21 +1,14 @@
 import Header from "@/components/header";
+import Location from "@/components/location";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 export default function Home() {
   return (
     <main className="mx-auto max-w-6xl p-4">
       <Header />
-      <div className="mx-auto w-full max-w-6xl px-4 pt-8">
+      <div className="mx-auto w-full max-w-6xl pt-8">
         <div className="grid grid-flow-row-dense gap-5 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
-          <Card className="sm:h-40">
-            <CardHeader>
-              <h3 className="">location</h3>
-              <span className="text-muted-foreground">🇺🇸 USA</span>
-            </CardHeader>
-            <CardContent>
-              <p> hello </p>
-            </CardContent>
-          </Card>
+          <Location />
           <Card className="sm:h-40">
             <CardHeader>
               <h3 className="">mode</h3>

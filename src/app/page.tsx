@@ -2,6 +2,7 @@ import About from "@/components/about";
 import Header from "@/components/header";
 import Location from "@/components/location";
 import Mode from "@/components/mode";
+import Technologies from "@/components/technologies";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 
@@ -31,14 +32,7 @@ export default function Home() {
               <p> hello </p>
             </CardContent>
           </Card>
-          <Card className="col-span-2 min-h-[50px]">
-            <CardHeader>
-              <h3 className="">skills</h3>
-            </CardHeader>
-            <CardContent>
-              <p> hello </p>
-            </CardContent>
-          </Card>
+         <Technologies />
           <Card className="col-span-2 row-span-3 min-h-[50px] overflow-hidden md:row-span-2">
             <CardHeader>
               <h3 className="">latest work</h3>

@@ -34,6 +34,18 @@ function Location() {
               center: [-96.615021, 36.19796],
             });
           }}
+          onTouchStart={(e) => {
+            e.target.flyTo({
+              zoom: 3.5,
+              center: [-99.9018, 31.9686],
+            });
+          }}
+          onTouchEnd={(e) => {
+            e.target.flyTo({
+              zoom: 1.5,
+              center: [-96.615021, 36.19796],
+            });
+          }}
         ></ReactMapGl>
       </CardContent>
     </Card>

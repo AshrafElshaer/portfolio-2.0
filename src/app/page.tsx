@@ -1,4 +1,5 @@
 import About from "@/components/about";
+import FeaturedProjects from "@/components/featured-project";
 import Header from "@/components/header";
 import Location from "@/components/location";
 import Mode from "@/components/mode";
@@ -24,14 +25,7 @@ export default function Home() {
               <p> hello </p>
             </CardContent>
           </Card>
-          <Card className="col-span-2 row-span-2 min-h-[50px]">
-            <CardHeader>
-              <h3 className="">projects</h3>
-            </CardHeader>
-            <CardContent>
-              <p> hello </p>
-            </CardContent>
-          </Card>
+          <FeaturedProjects />
           <Technologies />
           <Card className="col-span-2 row-span-3 min-h-[50px] overflow-hidden md:row-span-2">
             <CardHeader>

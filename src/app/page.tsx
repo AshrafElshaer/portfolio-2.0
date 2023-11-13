@@ -2,12 +2,12 @@ import About from "@/components/about";
 import Header from "@/components/header";
 import Location from "@/components/location";
 import Mode from "@/components/mode";
+import Quote from "@/components/quote";
 import Technologies from "@/components/technologies";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-
+import YearsOfExperience from "@/components/years-of-experience";
 
 export default function Home() {
- 
   return (
     <main className="mx-auto max-w-6xl p-4">
       <Header />
@@ -32,7 +32,7 @@ export default function Home() {
               <p> hello </p>
             </CardContent>
           </Card>
-         <Technologies />
+          <Technologies />
           <Card className="col-span-2 row-span-3 min-h-[50px] overflow-hidden md:row-span-2">
             <CardHeader>
               <h3 className="">latest work</h3>
@@ -49,22 +49,8 @@ export default function Home() {
               <p> hello </p>
             </CardContent>
           </Card>
-          <Card className="h-44 ">
-            <CardHeader>
-              <h3 className="">qute</h3>
-            </CardHeader>
-            <CardContent>
-              <p> hello </p>
-            </CardContent>
-          </Card>{" "}
-          <Card className="h-44">
-            <CardHeader>
-              <h3 className="">years of experience</h3>
-            </CardHeader>
-            <CardContent>
-              <p> hello </p>
-            </CardContent>
-          </Card>
+          <Quote />
+          <YearsOfExperience />
           <Card className="h-44 ">
             <CardHeader>
               <h3 className="">resume</h3>

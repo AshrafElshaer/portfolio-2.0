@@ -42,7 +42,7 @@ const technologies = [
   },
   {
     name: "Prisma",
-    Icon: () => <SiPrisma size={28} />,
+    Icon: () => <SiPrisma size={24} />,
   },
   {
     name: "TRPC",

@@ -11,7 +11,7 @@ function About() {
           {" "}
          Am Ash , Passionate about crafting seamless user experiences and staying ahead
           in the ever-evolving tech landscape. Let&apos;s build innovative
-          solutions together!{" "}
+          solutions together !{" "}
         </p>
       </CardContent>
     </Card>

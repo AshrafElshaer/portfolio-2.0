@@ -41,90 +41,82 @@ type IconName =
   | "linkedIn"
   | "prisma"
   | "trpc"
-  | "supabase";
+  | "supabase"
+  | "postgreSQL";
 
 type Options = {
   color?: string;
-  size?: string;
+  size?: number;
 };
 const Icons: Record<IconName, (props: Options) => ReactNode> = {
-  react: ({ color, size }) => <FaReact color={color} size={size} />,
-  typescript: ({ color, size }) => <SiTypescript color={color} size={size} />,
-  next: ({ color, size }) => <SiNextdotjs color={color} size={size} />,
-  redux: ({ color, size }) => <SiRedux color={color} size={size} />,
-  tailwind: ({ color, size }) => <SiTailwindcss color={color} size={size} />,
-  node: ({ color, size }) => <SiNodedotjs color={color} size={size} />,
-  express: ({ color, size }) => <SiExpress color={color} size={size} />,
-  mongoDB: ({ color, size }) => <SiMongodb color={color} size={size} />,
-  github: ({ color, size }) => <AiFillGithub color={color} size={size} />,
-  firebase: ({ color, size }) => <SiFirebase color={color} size={size} />,
-  linkedIn: ({ color, size }) => <AiFillLinkedin color={color} size={size} />,
+  react: ({ size = 32 }) => <BiLogoReact color={"#61dafb"} size={size} />,
+  typescript: ({ size = 32 }) => (
+    <BiLogoTypescript color="#007acc" size={size} />
+  ),
+  next: ({ color, size = 32 }) => <TbBrandNextjs color={color} size={size} />,
+  redux: ({ size = 32 }) => <BiLogoRedux color="#764abc" size={size} />,
+  tailwind: ({ size = 32 }) => <SiTailwindcss color="#0769ad" size={size} />,
+  node: ({ size = 32 }) => <BiLogoNodejs color="#68a063" size={size} />,
+  express: ({ color, size = 32 }) => <SiExpress color={color} size={size} />,
+  mongoDB: ({ size = 32 }) => <SiMongodb color="#0cd45b" size={size} />,
+  github: ({ color, size = 32 }) => <AiFillGithub color={color} size={size} />,
+  firebase: ({ color, size = 32 }) => <SiFirebase color={"#FFCA28 "} size={size} />,
+  linkedIn: ({ color, size = 32 }) => (
+    <AiFillLinkedin color={color} size={size} />
+  ),
 
-  prisma: ({ color, size }) => <SiPrisma color={color} size={size} />,
-  trpc: ({ color, size }) => <SiTrpc color={color} size={size} />,
-  supabase: ({ color, size }) => <SiSupabase color={color} size={size} />,
+  prisma: ({ color, size = 32 }) => <SiPrisma color={color} size={size} />,
+  trpc: ({ size = 32 }) => <SiTrpc color="#398ccb" size={size} />,
+  supabase: ({  size = 32 }) => <SiSupabase ccolor="#0cd45b" size={size} />,
+  postgreSQL: ({ size = 32 }) => (
+    <BiLogoPostgresql color="#008bb9" size={size} />
+  ),
 };
 
 export const technologies = [
   {
     name: "TypeScript",
-    Icon: () => <BiLogoTypescript color="#007acc" size={32} />,
+    Icon: () => <Icons.typescript />,
   },
   {
     name: "Next.js",
-    Icon: () => <TbBrandNextjs size={32} />,
+    Icon: () => <Icons.next />,
   },
   {
     name: "React.js",
-    Icon: () => <BiLogoReact size={32} color="#61dafb" />,
+    Icon: () => <Icons.react />,
   },
   {
     name: "Redux",
-    Icon: () => <BiLogoRedux size={32} color="#764abc" />,
+    Icon: () => <Icons.redux />,
   },
   {
     name: "Node.js",
-    Icon: () => <BiLogoNodejs size={32} color="#68a063" />,
+    Icon: () => <Icons.node />,
   },
   {
     name: "Express.js",
-    Icon: () => <SiExpress size={32} />,
+    Icon: () => <Icons.express />,
   },
   {
     name: "Prisma",
-    Icon: () => <SiPrisma size={24} />,
+    Icon: () => <Icons.prisma size={24} />,
   },
   {
     name: "TRPC",
-    Icon: () => (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="32"
-        height="32"
-        viewBox="0 0 128 128"
-      >
-        <path
-          fill="#398ccb"
-          d="M0 38C0 17 17 0 38 0h52c21 0 38 17 38 38v52c0 21-17 38-38 38H38c-21 0-38-17-38-38z"
-        />
-        <path
-          fill="#fff"
-          d="M63.9 18.8L81.6 29v5.6l21.5 12.5v21.2l5.8 3.3v20.6l-17.7 10.2l-7.9-4.6l-19.2 11.1l-19.1-11l-7.7 4.5l-17.8-10.3V71.6l5.6-3.2V47.1l21-12.2V29zM81.7 40v9.6L63.9 59.8L46.2 49.6v-9.3l-16.5 9.5v16l7.6-4.4l17.8 10.3v20.5l-5.4 3.1l14.5 8.3l14.5-8.4l-5.3-3V71.7l17.8-10.3l7.4 4.3V49.8zm7.2 55.8V83.2L78.1 77v12.5zM104.3 77l-10.8 6.3v12.5l10.8-6.3zM35 95.8V83.3L24.1 77v12.5zm15.5-18.7l-10.8 6.2v12.5l10.8-6.2zm40.7 2.3l10.9-6.3l-10.9-6.2l-10.8 6.2zM37.3 66.9l-10.8 6.2l10.8 6.3l10.8-6.3zm24.3-13.6V40.8l-10.8-6.2v12.5zm15.5-18.8l-10.9 6.3v12.5L77.1 47zm-13.2 2.3l10.9-6.3l-10.9-6.2l-10.8 6.2z"
-        />
-      </svg>
-    ),
+    Icon: () => <Icons.trpc />,
   },
   {
     name: "Tailwind CSS",
-    Icon: () => <SiTailwindcss size={32} color="#0769ad" />,
+    Icon: () => <Icons.tailwind />,
   },
   {
     name: "MongoDB",
-    Icon: () => <SiMongodb size={32} color="#0cd45b" />,
+    Icon: () => <Icons.mongoDB />,
   },
   {
     name: "PostgreSQL",
-    Icon: () => <BiLogoPostgresql size={32} color="#008bb9" />,
+    Icon: () => <Icons.postgreSQL />,
   },
 ];
 
@@ -140,12 +132,12 @@ export const projects = [
       "Product description, features & gallery",
     ],
     techStack: [
-      <Icons.typescript size="1.5rem" key={0} />,
-      <Icons.react size="1.5rem" key={1} />,
-      <Icons.node size="1.5rem" key={2} />,
-      <Icons.express size="1.5rem" key={3} />,
-      <Icons.mongoDB size="1.5rem" key={4} />,
-      <Icons.tailwind size="1.5rem" key={5} />,
+      <Icons.typescript size={28} key={0} />,
+      <Icons.react size={28} key={1} />,
+      <Icons.node size={28} key={2} />,
+      <Icons.express size={28} key={3} />,
+      <Icons.mongoDB size={28} key={4} />,
+      <Icons.tailwind size={28} key={5} />,
     ],
     gallery: [
       "/audiophile-1.png",
@@ -169,9 +161,9 @@ export const projects = [
       "Full authantication through firebase authantication",
     ],
     techStack: [
-      <Icons.react size="1.5rem" key={1} />,
-      <Icons.redux size="1.5rem" key={2} />,
-      <Icons.firebase size="1.5rem" key={3} />,
+      <Icons.react size={28} key={1} />,
+      <Icons.redux size={28} key={2} />,
+      <Icons.firebase size={28} key={3} />,
     ],
     gallery: [
       "/invoice-1.png",
@@ -195,10 +187,10 @@ export const projects = [
       "User can add or delete a chat room or friend",
     ],
     techStack: [
-      <Icons.next size="1.5rem" key={1} />,
-      <Icons.trpc size="1.5rem" key={0} />,
-      <Icons.prisma size="1.5rem" key={2} />,
-      <Icons.supabase size="1.5rem" key={3} />,
+      <Icons.next size={28} key={1} />,
+      <Icons.trpc size={28} key={0} />,
+      <Icons.prisma size={28} key={2} />,
+      <Icons.supabase size={28} key={3} />,
     ],
     gallery: ["/chat-1.png", "/chat-2.png", "/chat-3.png"],
     livePath: "https://chat-and-chill.vercel.app/",

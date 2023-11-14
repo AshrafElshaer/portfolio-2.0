@@ -6,12 +6,12 @@ function About() {
       <CardHeader>
         <h3 className="">about</h3>
       </CardHeader>
-      <CardContent className="text-sm py-6 ">
+      <CardContent className="py-6 text-sm ">
         <p>
           {" "}
-         Am Ash , Passionate about crafting seamless user experiences and staying ahead
-          in the ever-evolving tech landscape. Let&apos;s build innovative
-          solutions together !{" "}
+          Am Ash , A self-taught fullstack devoloper passionate about crafting
+          seamless user experiences and staying ahead in the ever-evolving tech
+          landscape. Let&apos;s build innovative solutions together !{" "}
         </p>
       </CardContent>
     </Card>

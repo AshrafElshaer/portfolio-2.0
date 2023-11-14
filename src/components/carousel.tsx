@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { FaGreaterThan, FaLessThan } from "react-icons/fa";
+import { Button } from "./ui/button";
 
 type Props = {
   gallery: string[];
@@ -18,30 +19,36 @@ function Carousel({ gallery, name }: Props) {
     setCurrentIdx((curr) => (curr !== gallery.length - 1 ? curr + 1 : curr));
   }
   return (
-    <div className='w-full h-full relative flex overflow-hidden'>
+    <div className="relative flex h-full w-full overflow-hidden">
       {gallery.map((img, idx) => (
         <Image
           key={idx}
           src={img}
           alt={name}
-          className={`w-full h-full rounded-lg absolute top-0 left-0 transition-transform duration-300  ${
+          className={`absolute left-0 top-0 h-full w-full rounded-lg transition-transform duration-300  ${
             idx !== currentIdx ? "translate-x-full" : ""
           } `}
           width={0}
           height={0}
-          sizes='100%'
+          sizes="100%"
         />
       ))}
-      <button
-        className='absolute top-1/2 -translate-y-1/2 right-1 z-20 bg-black/40 rounded-full text-white p-2 text-xs md:text-lg'
-        onClick={handleNext}>
+      <Button
+        variant="outline"
+        size="icon"
+        className="absolute right-1 top-1/2 z-20 -translate-y-1/2 rounded-full"
+        onClick={handleNext}
+      >
         <FaGreaterThan size={12} />
-      </button>
-      <button
-        className='absolute top-1/2 -translate-y-1/2 left-1 z-20 bg-black/40 rounded-full text-white p-2 text-xs md:text-lg'
-        onClick={handlePrevious}>
+      </Button>
+      <Button
+        variant="outline"
+        size="icon"
+        className="absolute left-1 top-1/2 z-20 -translate-y-1/2 rounded-full"
+        onClick={handlePrevious}
+      >
         <FaLessThan size={12} />
-      </button>
+      </Button>
     </div>
   );
 }

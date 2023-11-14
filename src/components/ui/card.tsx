@@ -9,7 +9,7 @@ const Card = React.forwardRef<
   <section
     ref={ref}
     className={cn(
-      "shinny-border relative rounded-xl bg-card text-card-foreground shadow",
+      "shinny-border relative rounded-xl bg-card text-card-foreground shadow overflow-hidden",
       className,
     )}
     {...props}

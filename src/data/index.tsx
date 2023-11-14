@@ -60,14 +60,33 @@ const Icons: Record<IconName, (props: Options) => ReactNode> = {
   express: ({ color, size = 32 }) => <SiExpress color={color} size={size} />,
   mongoDB: ({ size = 32 }) => <SiMongodb color="#0cd45b" size={size} />,
   github: ({ color, size = 32 }) => <AiFillGithub color={color} size={size} />,
-  firebase: ({ color, size = 32 }) => <SiFirebase color={"#FFCA28 "} size={size} />,
+  firebase: ({ color, size = 32 }) => (
+    <SiFirebase color={"#FFCA28 "} size={size} />
+  ),
   linkedIn: ({ color, size = 32 }) => (
     <AiFillLinkedin color={color} size={size} />
   ),
 
   prisma: ({ color, size = 32 }) => <SiPrisma color={color} size={size} />,
-  trpc: ({ size = 32 }) => <SiTrpc color="#398ccb" size={size} />,
-  supabase: ({  size = 32 }) => <SiSupabase ccolor="#0cd45b" size={size} />,
+  trpc: ({ size = 32 }) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size}
+      height={size}
+      viewBox="0 0 128 128"
+    >
+      <path
+        fill="#398ccb"
+        d="M0 38C0 17 17 0 38 0h52c21 0 38 17 38 38v52c0 21-17 38-38 38H38c-21 0-38-17-38-38z"
+      />
+      <path
+        fill="#fff"
+        d="M63.9 18.8L81.6 29v5.6l21.5 12.5v21.2l5.8 3.3v20.6l-17.7 10.2l-7.9-4.6l-19.2 11.1l-19.1-11l-7.7 4.5l-17.8-10.3V71.6l5.6-3.2V47.1l21-12.2V29zM81.7 40v9.6L63.9 59.8L46.2 49.6v-9.3l-16.5 9.5v16l7.6-4.4l17.8 10.3v20.5l-5.4 3.1l14.5 8.3l14.5-8.4l-5.3-3V71.7l17.8-10.3l7.4 4.3V49.8zm7.2 55.8V83.2L78.1 77v12.5zM104.3 77l-10.8 6.3v12.5l10.8-6.3zM35 95.8V83.3L24.1 77v12.5zm15.5-18.7l-10.8 6.2v12.5l10.8-6.2zm40.7 2.3l10.9-6.3l-10.9-6.2l-10.8 6.2zM37.3 66.9l-10.8 6.2l10.8 6.3l10.8-6.3zm24.3-13.6V40.8l-10.8-6.2v12.5zm15.5-18.8l-10.9 6.3v12.5L77.1 47zm-13.2 2.3l10.9-6.3l-10.9-6.2l-10.8 6.2z"
+      />
+    </svg>
+  ),
+  // trpc: ({ size = 32 }) => <SiTrpc color="#398ccb" size={size} />,
+  supabase: ({ size = 32 }) => <SiSupabase color="#0cd45b" size={size} />,
   postgreSQL: ({ size = 32 }) => (
     <BiLogoPostgresql color="#008bb9" size={size} />
   ),
@@ -104,7 +123,7 @@ export const technologies = [
   },
   {
     name: "TRPC",
-    Icon: () => <Icons.trpc />,
+    Icon: () => <Icons.trpc size={26} />,
   },
   {
     name: "Tailwind CSS",
@@ -123,6 +142,30 @@ export const technologies = [
 export const projects = [
   {
     id: 1,
+    name: "Fx Research",
+    subTitle: "Forex Market Research Tool",
+    description: [
+      "At Fx Research, we are revolutionizing the way traders navigate the complexities of the foreign exchange market. As a cutting-edge forex analysis research web app, we empower traders of all levels with the tools and insights they need to make informed decisions and achieve their financial goals",
+    ],
+    techStack: [
+      <Icons.typescript size={28} key={0} />,
+      <Icons.next size={28} key={1} />,
+      <Icons.trpc size={26} key={2} />,
+      <Icons.prisma size={26} key={3} />,
+      <Icons.supabase size={26} key={4} />,
+    ],
+    gallery: [
+      "/fxresearch-1.png",
+      "/fxresearch-2.png",
+      "/fxresearch-3.png",
+      "/fxresearch-4.png",
+      "/fxresearch-5.png",
+    ],
+    livePath: "https://fx-research.vercel.app/",
+    githubPath: null,
+  },
+  {
+    id: 2,
     name: "AudioPhile",
     subTitle: "Audio Hardware E-commerce ",
     description: [
@@ -151,7 +194,7 @@ export const projects = [
     githubPath: "https://github.com/AshrafElshaer/e-commerce-client",
   },
   {
-    id: 2,
+    id: 3,
     name: "Invoice X",
     subTitle: "Invoicing web app ",
     description: [
@@ -174,26 +217,5 @@ export const projects = [
     ],
     livePath: "https://curious-meringue-78ffd1.netlify.app/",
     githubPath: "https://github.com/AshrafElshaer/invoice-app-redux",
-  },
-  {
-    id: 3,
-    name: "Chat & Chill",
-    subTitle: "Live Web Chat Application ",
-    description: [
-      "A live chat web app that allows users to chat with each other in real-time",
-      "Full authantication through Next-Auth authantication",
-      "Users can send images or files in the chat",
-      "Users can see who is online",
-      "User can add or delete a chat room or friend",
-    ],
-    techStack: [
-      <Icons.next size={28} key={1} />,
-      <Icons.trpc size={28} key={0} />,
-      <Icons.prisma size={28} key={2} />,
-      <Icons.supabase size={28} key={3} />,
-    ],
-    gallery: ["/chat-1.png", "/chat-2.png", "/chat-3.png"],
-    livePath: "https://chat-and-chill.vercel.app/",
-    githubPath: "https://github.com/AshrafElshaer/chat-and-chill",
   },
 ];

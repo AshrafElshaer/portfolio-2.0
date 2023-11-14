@@ -36,13 +36,15 @@ function FeaturedProjects() {
                 <DialogTitle>{project.name}</DialogTitle>
                 <DialogDescription>{project.subTitle}</DialogDescription>
               </DialogHeader>
-              <div className="flex h-[28rem] flex-col  gap-4  ">
+              <div className="flex h-[30rem] flex-col  gap-4  ">
                 <div className="h-1/2 w-full ">
                   <Carousel gallery={project.gallery} name={project.name} />
                 </div>
                 <div className="w-full">
                   <h4 className="my-2 text-sm font-semibold">Description</h4>
-                  <p className="text-xs">{project.description}</p>
+                  <p className="text-sm text-secondary-foreground/80">
+                    {project.description}
+                  </p>
                   <h4 className="my-2 text-sm font-semibold">Technologies</h4>
                   <ul className="flex gap-2 text-xs">
                     {project.techStack.map((tech, idx) => (
@@ -62,16 +64,18 @@ function FeaturedProjects() {
                     <FaEye />
                     Demo
                   </Link>
-                  <Link
-                    href={project.githubPath}
-                    target="_blank"
-                    className={buttonVariants({
-                      variant: "glassy",
-                      className: "w-full gap-2",
-                    })}
-                  >
-                    <FaCode /> Code
-                  </Link>
+                  {project.githubPath ? (
+                    <Link
+                      href={project.githubPath}
+                      target="_blank"
+                      className={buttonVariants({
+                        variant: "glassy",
+                        className: "w-full gap-2",
+                      })}
+                    >
+                      <FaCode /> Code
+                    </Link>
+                  ) : null}
                 </div>
               </div>
             </DialogContent>

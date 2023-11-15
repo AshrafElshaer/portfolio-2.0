@@ -24,7 +24,7 @@ const CardHeader = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "flex items-center justify-between border-b p-2  text-xs font-semibold capitalize tracking-wide text-secondary-foreground/80",
+      "flex items-center justify-between border-b p-2  text-xs font-semibold capitalize tracking-wide text-secondary-foreground/80 ",
       className,
     )}
     {...props}

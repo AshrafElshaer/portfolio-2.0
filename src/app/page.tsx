@@ -1,12 +1,16 @@
 import About from "@/components/about";
 import FeaturedProjects from "@/components/featured-project";
 import Header from "@/components/header";
+import LatestWork from "@/components/latest-work";
+import LearningNext from "@/components/learning-next";
 import Location from "@/components/location";
 import Mode from "@/components/mode";
 import Quote from "@/components/quote";
 import Technologies from "@/components/technologies";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import YearsOfExperience from "@/components/years-of-experience";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -27,22 +31,8 @@ export default function Home() {
           </Card>
           <FeaturedProjects />
           <Technologies />
-          <Card className="col-span-2 row-span-3 min-h-[50px] overflow-hidden md:row-span-2">
-            <CardHeader>
-              <h3 className="">latest work</h3>
-            </CardHeader>
-            <CardContent>
-              <p> hello </p>
-            </CardContent>
-          </Card>
-          <Card className=" col-span-2 overflow-hidden">
-            <CardHeader>
-              <h3 className="">side projects</h3>
-            </CardHeader>
-            <CardContent>
-              <p> hello </p>
-            </CardContent>
-          </Card>
+          <LatestWork />
+          <LearningNext />
           <Quote />
           <YearsOfExperience />
           <Card className="h-44 ">

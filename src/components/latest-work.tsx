@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function LatestWork() {
   return (
-    <Card className="col-span-2 row-span-3 flex min-h-[50px] flex-col overflow-hidden md:row-span-2">
+    <Card className="col-span-2 row-span-3 flex min-h-[20rem] md:min-h-[17rem] flex-col overflow-hidden md:row-span-2">
       <CardHeader className="z-20">
         <h3 className="">latest work</h3>
       </CardHeader>

@@ -51,7 +51,7 @@ type Options = {
 const Icons: Record<IconName, (props: Options) => ReactNode> = {
   react: ({ size = 32 }) => <BiLogoReact color={"#61dafb"} size={size} />,
   typescript: ({ size = 32 }) => (
-    <BiLogoTypescript color="#007acc" size={size}  />
+    <BiLogoTypescript color="#007acc" size={size} />
   ),
   next: ({ color, size = 32 }) => <TbBrandNextjs color={color} size={size} />,
   redux: ({ size = 32 }) => <BiLogoRedux color="#764abc" size={size} />,
@@ -95,7 +95,7 @@ const Icons: Record<IconName, (props: Options) => ReactNode> = {
 export const technologies = [
   {
     name: "TypeScript",
-    Icon: () => <Icons.typescript  />,
+    Icon: () => <Icons.typescript />,
   },
   {
     name: "Next.js",
@@ -217,5 +217,28 @@ export const projects = [
     ],
     livePath: "https://curious-meringue-78ffd1.netlify.app/",
     githubPath: "https://github.com/AshrafElshaer/invoice-app-redux",
+  },
+];
+
+
+
+export const education = [
+  {
+    id: 1,
+    school: "ZTM Academy",
+    degree: "Node & Express Js",
+    duration: "2021 - 2023",
+  },
+  {
+    id: 2,
+    school: "ZTM Academy",
+    degree: "React , Redux & Typescript ",
+    duration: "2021 - 2023",
+  },
+  {
+    id: 3,
+    school: "Epic Flight Academy",
+    degree: "Instrument Pilot License",
+    duration: "2016 - 2018",
   },
 ];

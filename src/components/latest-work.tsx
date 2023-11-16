@@ -5,17 +5,17 @@ import Image from "next/image";
 
 function LatestWork() {
   return (
-    <Card className="col-span-2 row-span-3 flex min-h-[20rem] md:min-h-[17rem] flex-col overflow-hidden md:row-span-2">
-      <CardHeader className="z-20">
+    <Card className="col-span-2 row-span-3 flex min-h-[20rem] flex-col overflow-hidden md:row-span-2 md:min-h-[17rem]">
+      <CardHeader>
         <h3 className="">latest work</h3>
       </CardHeader>
       <CardContent className="relative flex-1 p-1">
         <Link href="https://fx-research.vercel.app/" target="_blank">
           <Image
             src="/fxresearch-1.png"
-            alt="fx"
+            alt="fx-research"
             layout="fill"
-            className="z-10 transition-all duration-300 ease-in-out hover:scale-150"
+            className="scale-[0.99]"
           />
         </Link>
       </CardContent>

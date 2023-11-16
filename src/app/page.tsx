@@ -1,56 +1,34 @@
 import About from "@/components/about";
+import Education from "@/components/education";
 import FeaturedProjects from "@/components/featured-project";
 import Header from "@/components/header";
 import LatestWork from "@/components/latest-work";
 import LearningNext from "@/components/learning-next";
 import Location from "@/components/location";
 import Mode from "@/components/mode";
+import Partner from "@/components/partner";
 import Quote from "@/components/quote";
 import Technologies from "@/components/technologies";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import YearsOfExperience from "@/components/years-of-experience";
-import Image from "next/image";
-import Link from "next/link";
 
 export default function Home() {
   return (
     <main className="mx-auto max-w-6xl p-4">
       <Header />
-      <div className="mx-auto w-full max-w-6xl pt-8">
+      <div className=" w-full  pt-8">
         <div className="grid grid-flow-row-dense gap-5 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
           <Location />
           <Mode />
           <About />
-          <Card className="col-span-2 row-span-2 overflow-hidden">
-            <CardHeader>
-              <h3 className="">experience</h3>
-            </CardHeader>
-            <CardContent>
-              <p> hello </p>
-            </CardContent>
-          </Card>
+          <Education />
           <FeaturedProjects />
           <Technologies />
           <LatestWork />
           <LearningNext />
           <Quote />
           <YearsOfExperience />
-          <Card className="h-44 ">
-            <CardHeader>
-              <h3 className="">resume</h3>
-            </CardHeader>
-            <CardContent>
-              <p> hello </p>
-            </CardContent>
-          </Card>
-          <Card className="h-44">
-            <CardHeader>
-              <h3 className="">newsletter</h3>
-            </CardHeader>
-            <CardContent>
-              <p> hello </p>
-            </CardContent>
-          </Card>
+          <Partner />
         </div>
       </div>
     </main>

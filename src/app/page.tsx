@@ -9,7 +9,6 @@ import Mode from "@/components/mode";
 import Partner from "@/components/partner";
 import Quote from "@/components/quote";
 import Technologies from "@/components/technologies";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import YearsOfExperience from "@/components/years-of-experience";
 
 export default function Home() {

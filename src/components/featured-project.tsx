@@ -31,7 +31,7 @@ function FeaturedProjects() {
                 {project.subTitle}
               </span>
             </DialogTrigger>
-            <DialogContent>
+            <DialogContent className="max-w-md">
               <DialogHeader>
                 <DialogTitle>{project.name}</DialogTitle>
                 <DialogDescription>{project.subTitle}</DialogDescription>

@@ -8,8 +8,9 @@ import Link from "next/link";
 function Header() {
   return (
     <header className=" flex items-center justify-start gap-2 ">
-      <div className=" max-w-fit flex gap-2 justify-center items-center">
-        <Avatar className="w-12 h-12">
+      <div className=" flex max-w-fit items-center justify-center gap-2">
+        <Avatar className="h-12 w-12">
+          <AvatarImage src="/profile-pic.png" alt="Ashraf Elshaer" />
           <AvatarFallback className="text-xl">AE</AvatarFallback>
         </Avatar>
         <div className="w-full">

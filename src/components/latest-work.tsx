@@ -14,7 +14,7 @@ function LatestWork() {
           <Image
             src="/fxresearch-1.png"
             alt="fx-research"
-            layout="fill"
+            fill
             className="scale-[0.99]"
           />
         </Link>

@@ -28,9 +28,10 @@ function Carousel({ gallery, name }: Props) {
           className={`absolute left-0 top-0 h-full w-full rounded-lg transition-transform duration-300  ${
             idx !== currentIdx ? "translate-x-full" : ""
           } `}
-          width={0}
-          height={0}
+          fill
           sizes="100%"
+          placeholder="blur"
+          blurDataURL={img}
         />
       ))}
       <Button

@@ -10,7 +10,7 @@ function LatestWork() {
         <h3 className="">latest work</h3>
       </CardHeader>
       <CardContent className="relative flex-1 p-1">
-        <Link href="https://fx-research.vercel.app/" target="_blank">
+        <Link href="https://fxresearch.app/" target="_blank">
           <Image
             src="/fxresearch-1.png"
             alt="fx-research"

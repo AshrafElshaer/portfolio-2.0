@@ -91,8 +91,8 @@ const Icons: Record<IconName, (props: Options) => ReactNode> = {
 	drizzle: ({ size = 32 }) => (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
-			width="1em"
-			height="1em"
+			width="5em"
+			height="2em"
 			viewBox="0 0 24 24"
 		>
 			<path

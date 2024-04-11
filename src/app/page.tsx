@@ -1,5 +1,6 @@
 import About from "@/components/about";
 import Education from "@/components/education";
+import Experiance from "@/components/experiance";
 import FeaturedProjects from "@/components/featured-project";
 import Header from "@/components/header";
 import LatestWork from "@/components/latest-work";
@@ -20,7 +21,8 @@ export default function Home() {
           <Location />
           <Mode />
           <About />
-          <Education />
+          <Experiance />
+          {/* <Education /> */}
           <FeaturedProjects />
           <Technologies />
           <LatestWork />
